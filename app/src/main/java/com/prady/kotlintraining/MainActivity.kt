@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
             rollDice()
         }
         rollDice()
+        supportActionBar?.title = "KotlinTraining: Dice Roll"
     }
 
     private fun rollDice() {
