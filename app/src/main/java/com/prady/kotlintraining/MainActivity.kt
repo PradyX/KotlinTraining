@@ -2,7 +2,7 @@ package com.prady.kotlintraining
 
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
     private fun rollDice() {
         val dice = dice(6)
         val diceroll = dice.roll()
-        val resultText: TextView = findViewById(R.id.textView)
-        resultText.text = diceroll.toString()
+        val diceImage: ImageView = findViewById(R.id.imageView)
+        diceImage.setImageResource(R.drawable.dice_2)
     }
 
     class dice(val numside: Int) {
