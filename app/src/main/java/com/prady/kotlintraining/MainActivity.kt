@@ -19,14 +19,16 @@ class MainActivity : AppCompatActivity() {
         val dice = dice(6)
         val diceroll = dice.roll()
         val diceImage: ImageView = findViewById(R.id.imageView)
-        when (diceroll) {
-            1 -> diceImage.setImageResource(R.drawable.dice_1)
-            2 -> diceImage.setImageResource(R.drawable.dice_2)
-            3 -> diceImage.setImageResource(R.drawable.dice_3)
-            4 -> diceImage.setImageResource(R.drawable.dice_4)
-            5 -> diceImage.setImageResource(R.drawable.dice_5)
-            6 -> diceImage.setImageResource(R.drawable.dice_6)
+        diceImage.contentDescription = diceroll.toString()
+        val drawableResource = when (diceroll) {
+            1 -> R.drawable.dice_1
+            2 -> R.drawable.dice_2
+            3 -> R.drawable.dice_3
+            4 -> R.drawable.dice_4
+            5 -> R.drawable.dice_5
+            else -> R.drawable.dice_6
         }
+        diceImage.setImageResource(drawableResource)
     }
 
     class dice(val numside: Int) {
