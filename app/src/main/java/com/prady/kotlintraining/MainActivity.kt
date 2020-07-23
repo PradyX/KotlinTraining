@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         rollBtn.setOnClickListener {
             rollDice()
         }
+        rollDice()
     }
 
     private fun rollDice() {
